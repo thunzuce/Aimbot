@@ -6,7 +6,7 @@ getgenv().Elisium = {
 
         AimPart = "UpperTorso",
 
-        Prediction = 0.123,
+        Prediction = 0.1,
 
         Smoothness = 0.09,
 
@@ -18,7 +18,7 @@ getgenv().Elisium = {
 
     Cframe = {
 
-        enabled = false,
+        enabled = true,
 
         speed = 0.1
 
@@ -44,7 +44,7 @@ getgenv().Elisium = {
 
         targetPart = "UpperTorso",
 
-        prediction = 0.1535
+        prediction = 0.1
 
     },
 
