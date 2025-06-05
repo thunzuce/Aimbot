@@ -20,7 +20,7 @@ getgenv().Elisium = {
 
         enabled = false,
 
-        speed = 2
+        speed = 0.1
 
     },
 
