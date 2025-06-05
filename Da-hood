@@ -18,7 +18,7 @@ getgenv().Elisium = {
 
     Cframe = {
 
-        enabled = true,
+        enabled = false,
 
         speed = 0.1
 
