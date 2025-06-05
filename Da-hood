@@ -6,9 +6,9 @@ getgenv().Elisium = {
 
         AimPart = "UpperTorso",
 
-        Prediction = 0.1,
+        Prediction = 0.3187291,
 
-        Smoothness = 0.09,
+        Smoothness = 0.2135875,
 
         Mode = "Button",
 
@@ -44,7 +44,7 @@ getgenv().Elisium = {
 
         targetPart = "UpperTorso",
 
-        prediction = 0.1
+        prediction = 0.3187291
 
     },
 
