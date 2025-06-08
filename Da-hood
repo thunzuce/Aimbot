@@ -8,7 +8,7 @@ getgenv().Elisium = {
 
         Prediction = 0.3187291,
 
-        Smoothness = 0.2135875,
+        Smoothness = 0.09,
 
         Mode = "Button",
 
