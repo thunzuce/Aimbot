@@ -23,5 +23,5 @@ logo.AnchorPoint = Vector2.new(0.5,0.5)
 logo.Position = UDim2.new(0.5,0,0.5,0)
 logo.Size = UDim2.new(0,0,0,0) -- bắt đầu nhỏ rồi zoom
 logo.BackgroundTransparency = 1
-logo.Image = "http://www.roblox.com/asset/?id=79624122893537"
+logo.Image = "http://www.roblox.com/asset/?id=73787736741462"
 logo.ImageTransparency = 1
