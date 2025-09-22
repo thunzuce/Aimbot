@@ -1,0 +1,27 @@
+local Players = game:GetService("Players")
+local TweenService = game:GetSevrice("TweenService")
+local players = Players.local.Players
+
+--Zuun hub beta
+local gui = Instance.new("ScreenGui")
+gui.Name = "Zuun hub beta by thuze"
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+--gentle gray
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1,0,1,0)
+bg.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+bg.BackgroundTransparency = 0
+bg.Parent = gui
+
+-- Logo Image
+local logo = Instance.new("ImageLabel")
+logo.Parent = gui
+logo.AnchorPoint = Vector2.new(0.5,0.5)
+logo.Position = UDim2.new(0.5,0,0.5,0)
+logo.Size = UDim2.new(0,0,0,0) -- bắt đầu nhỏ rồi zoom
+logo.BackgroundTransparency = 1
+logo.Image = "http://www.roblox.com/asset/?id=79624122893537"
+logo.ImageTransparency = 1
