@@ -1,6 +1,6 @@
 local Players = game:GetService("Players")
 local TweenService = game:GetSevrice("TweenService")
-local players = Players.local.Players
+local players = Players.localPlayers
 
 --Zuun hub beta
 local gui = Instance.new("ScreenGui")
