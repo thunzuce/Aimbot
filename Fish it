@@ -317,3 +317,30 @@ local v15 = v14:CreateWindow({
     Acrylic = false,
     Size = UDim2.fromOffset(500, 320),
     MinimizeKey = Enum.KeyCode.End
+});
+local v16 = {
+    Home = v15:AddTab({
+        Title = "info"
+    }),
+    Main = v15:AddTab({
+        Title = "farm"
+    }),
+    event = v15:AddTab({
+        Title = "event"
+    }),
+    ITM = v15:AddTab({
+        Title = "item"
+    }),
+    Setting = v15:AddTab({
+        Title = "Setting"
+    }),
+    Teleport = v15:AddTab({
+        Title = "Teleport"
+    }),
+    Shop = v15:AddTab({
+        Title = "Shop"
+    }),
+    Misc = v15:AddTab({
+        Title = "Misc"
+    })
+};
