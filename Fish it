@@ -1,4 +1,4 @@
-shared.LoaderTitle = "Zuun beta";
+shared.LoaderTitle = "Zuun";
 shared.LoaderKeyFrames = {
     [1] = {
         1,
