@@ -321,10 +321,10 @@ local v16 = {
     Setting = v15:AddTab({Title = "Setting"}),
     Teleport = v15:AddTab({Title = "Teleport"}),
     Shop = v15:AddTab({Title = "Shop"}),
-    Misc = v15:AddTab({Title = "Misc")
+    Misc = v15:AddTab({Title = "Misc"})
 };
 
--- [Phần tự động hóa gameplay với toggle]
+-- [Gameplay automation with toggle]
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -349,8 +349,8 @@ local targetPos = if distance1 < distance2 then pos1 else pos2
 character:SetPrimaryPartCFrame(CFrame.new(targetPos))
 
 -- Assume there are remote events in ReplicatedStorage for casting and reeling the rod
-local castEvent = RS:WaitForChild("CastRod") -- Adjust remote name based on the game
-local reelEvent = RS:WaitForChild("Reel") -- Adjust remote name based on the game
+local castEvent = RS:FindFirstChild("CastRod") -- Adjust remote name based on the game
+local reelEvent = RS:FindFirstChild("Reel") -- Adjust remote name based on the game
 
 -- Equip the rod (assuming the name is "Starter Rod", change if different)
 local backpack = player.Backpack
@@ -361,10 +361,10 @@ end
 
 -- Function to simulate continuous mouse clicks for "Click Fast"
 local function simulateClickFast()
-    local clickFastGui = player.PlayerGui:WaitForChild("Main"):FindFirstChild("ClickFastFrame") -- Adjust GUI path
+    local clickFastGui = player.PlayerGui:WaitForChild("Main"):FindFirstChild("ClickFastFrame") -- Adjust GUI path if needed
     if clickFastGui and clickFastGui.Visible then
         for i = 1, 100 do
-            mouse1click() -- Requires an executor like Synapse
+            UIS:SendMouseButtonEvent(0, 0, 0, true, game, 0)  -- Simulate left mouse click (requires executor support)
             wait(0.01)
         end
     end
@@ -406,10 +406,8 @@ local function toggleAutomation(state)
     end
 end
 
--- Add toggle to Setting tab
-v16.Setting:AddToggle("AutoFarm", {
+-- Add toggle to Farm tab (moved from Setting to Main/farm tab as per request)
+v16.Main:AddToggle("AutoFarm", {
     Title = "Auto Farm",
     Default = false -- Default state is off
-}, function(state)
-    toggleAutomation(state)
-end)
+}, toggleAutomation) -- Pass the function directly
